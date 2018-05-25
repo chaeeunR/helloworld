@@ -1,0 +1,590 @@
+[1] 출력
+ - 형식 : print(내용) : '' 혹은 "" 둘 다 사용 가능
+ - 문자열과 함께 출력할 때 : 자바에서는 +를 사용하지만 파이썬은 ,을 사용
+ 
+[2] ESCAPE 문자
+ - 특수한 기능을 하는 특수 문자 
+ - '\' 문자 뒤에 약속된 기능을 가진 문자를 입력하여 특수한 기능을 수행
+ - 예시
+  (1) \n : 새로운 줄로 이동
+  (2) \t : tab 크기만큼 이동
+  (3) \" : "을 출력함
+  (4) \' : '을 출력함
+  
+[3] 사칙연산
+ - +, -, *, / 모두 가능
+ - 자바와의 차이점 : 나눗셈(/)
+  > 자바는 정수끼리 나눗셈일 때 int 부분만 출력 but 파이썬은 나누기를 한 결과 모두 출력
+ - // : 몫을 구할 때  |  % : 나머지를 구할 때
+ 
+[4] 진법
+ (1) 2진수(bin()) : 0,1 // Ob0100 0001  
+ (2) 8진수(oct()) : 0~7 // Oo101
+ (3) 10진수 : 0~9 // 65
+ (4) 16진수(hex()) : 0~9, A~F // Ox41
+
+[5] 서식 제어 문자
+ - 저장된  값을 가져와서 어떤 형태로 출력할지 정해주는 문자
+ - '%' 문자 뒤에 약속된 형식을 가진 문자를 입력하여 형식에 맞게 출력
+ - 형식
+  (1) %d : 10진 정수 print("%d %d" %(123,321))
+   %d : 기본 값 / %5d : 5자리로 출력 오른쪽에 붙여서 / %05d :5자리로 출력 나머지는 0으로 채움 
+   %-5d : 5자리로 출력 왼쪽부터
+  (2) %o : 8진 정수
+  (3) %x : 16진 정수
+  (4) %f : 실수(소수점이 붙은 수)
+   %f : 기본 값 / %10.3f : 10자리 중에 오른쪽부터 출력 소수점 3자리까지만 출력
+   %.2f : 소수점 2자리까지만 출력
+  (5) %c : 단일 문자
+  (6) %s : 문자열
+   %s : 기본 값
+   %20s : 20자리 중에 오른쪽부터 출력 
+  (7) : '{:^10}'.format('가운데')) - 가운데 출력
+  (8) : '{:,}.format(1000000) - 단위마다 , 를 찍는 것
+   
+[6] 주석처리
+ #을 사용하거나 ''' 내용 ''' 을 사용
+ 
+[7] 변수 작명 규칙
+ - 변수의 이름은 알파벳, 숫자, 언더바(_)로 구성
+ - 대소문자 구분
+ - 변수의 이름은 숫자로 시작할 수 없음
+ - 키워드(예약어)는 변수 이름으로 사용 불가능
+ - 공백이나 특수기호는 포함될 수 없음
+ 
+ * 예약어 
+  - 프로그래밍 언어 중에서 의미가 고정되어 있고, 사용자가 작성하는 프로그램 상태에
+    따라서 의미를 변경할 수 없는 단어
+ 
+[8] 변수
+ - 한가지 값으로 고정되지 않고 여러 가지 값으로 변할 수 있는 공간
+ - 데이터를 사용하기 위해 메모리에 공간을 할당 받는데 할당 받은 공간에 이름을
+   정해 두고 원할 때 꺼내 쓰거나, 변경 할 수 있음
+   
+[9] id 출력 & type 출력
+ - id(변수 혹은 값) : 그 값에 해당하는 위치 값을 출력
+ - type(변수 혹은 값) : 그 값에 해당하는 유형을 출력
+  > 변수의 자료형 확인
+   * <class 'int'> : 정수형
+   * <class 'float'> : 실수형
+   * <class 'str'> : 문자열
+   * <class 'bool'> : 불형 (논리형)
+   
+[10] round (소수점 자리수 출력하는 것)
+ -Ex
+  flt = 123.567
+  round(flt) : 기본 값 출력
+  round(flt,1) : 소수점 1번째 자리까지 출력
+  round(flt,2) : 소수점 2번째 자리까지 출력
+  
+[11] 입력 함수
+ 변수 = input() : 문자열 타입
+ 변수 = int(input()) : int타입
+
+[12] 산술 연산자
+ = : 대입 연산자
+ + : 더하기
+ - : 빼기
+ * : 곱하기
+ ** : 제곱 (자바와의 차이점)
+ / : 나누기 (자바와의 차이점)
+ // : 몫 (자바와의 차이점)
+ % : 나머지
+ 
+[13] 관계 연산자
+ < / > / <= / >= / == / !=
+ 
+[14] 대입 연산자
+ += / -= / *= / /= / //= / %= / **=
+ 
+[15] 논리 연산자
+ - 참과 거짓을 판별하는 연산
+ - and : 둘 다 참이면 참 , 나머지는 거짓
+ - or : 둘 중 하나 이상이 참이면 참, 둘다 거짓일 때 거짓
+ - not : 연산 결과가 거짓일 때는 참으로, 참일때는 거짓으로 출력
+ 
+[16] 비트 연산자
+ - 2진수로 변환하여 비트 단위의 연산을 수행하는 연산자
+ - a|b : a와 b를 bit로 변환하여 OR 연산
+ - a&b : a와 b를 bit로 변환하여 AND 연산
+ - a^b : a와 b를 bit로 변환하여 XOR 연산
+ - ~a : a를 bit로 변환하여 NOT 연산
+ - a>>2 : a를 bit로 변환하여 오른쪽으로 shift
+ - a<<2 : a를 bit로 변환하여 왼쪽으로 shift
+ 
+[17] if문
+ - 조건식이 참이면 실행할 문장이 처리되고, 거짓이면 아무것도 실행하지 않고 프로그램을 종료
+ - 형태 : 
+  > if 조건식 :
+  		종속문장
+  	다음문장
+  	
+  > if 조건식 :
+  		종속문장
+  		종속문장
+  	다음문장
+  	
+[18] if ~ else문
+ - 참일 때 실행하는 종속문장과 거짓일 때 실행하는 종속문장이 다를 때 사용
+ - 형태 :
+  > if 조건식 :
+  		종속문장
+  	else :
+   	 	종속문장
+   	다음문장
+   	 
+  > if 조건식 :
+   		종속문장
+   		종속문장
+   	else : 
+   	 	종속문장
+   	 	종속문장
+   	다음 문장
+   	 
+[19] 중첩 if문
+ - 형태 :
+  > if 조건식 1 :
+  		if 조건식 2 :
+  			종속문장 1
+  		else :
+  			종속문장 2
+  	else :
+  		종속문장 3
+  	다음 문장
+
+[20] elif 문
+ - 각 조건에 맞는 부분을 찾아서 실행
+ - 형태 :
+  > if 조건식 1 :
+    	문장1
+    elif 조건식 2 :
+    	문장2
+    elif 조건식 3 :
+    	문장3
+    .....
+    elif 조건식 n :
+    	문장 n
+    else :
+    	문장 n+1
+    	
+[21] 제어문 - 반복문[for]
+ - for 변수 in range(초기값, 끝값, 증감값) :
+   		print("종속문장")
+  
+ - 예시 
+  >>> st = "Hello Python"
+  >>> for i in st:
+	  	print("i :",i)
+	  	i : H
+ - 출력 결과
+ i : e
+ i : l
+ i : l
+ i : o
+ i :  
+ i : P
+ i : y
+ i : t
+ i : h
+ i : o
+ i : n
+ 
+ - 예시
+ >>> list = [10,"test",123.123]
+ >>> print(list)
+ [10, 'test', 123.123]
+ >>> for i in list:
+	 print(i)
+
+ - 출력 결과	
+ 10
+ test
+ 123.123
+ 
+[22] 이중 for문
+ - 중첩 for문은 for문 내부에 또 다른 for문이 들어있는 형태 (총 횟수 : 내부 for문 * 외부 for문)
+ - 형태
+  > for i in range(초기값, 끝 값, 증감값) :
+  		for j in range(초기값, 끝 값, 증감값) :
+  			종속문장
+  			
+[23] while문
+ - 정의 : 주어진 조건식을 평가하여 그 결과가 참인 동안은 while 루프의 종속문장을 반복실행
+ - 형태
+  > while 조건식 :
+  		종속 문장
+  	while 조건식 :
+  		종속 문장
+  	else :
+  		종속 문장
+  		
+ - 예시
+  i = 0
+  while i < 5 :
+  	print(i)
+  	i+=1
+  print("다음문장")
+  
+ - 예시
+  i = 1
+  flag = True
+  while flag :
+  	print(i)
+  	if i == 10:
+  		flag = False
+  	i+=1
+  	
+[24] 기타 제어문
+ * break문
+ - for, while 문에서 실행 루프로붙 벗어나려고 할 때 사용
+ * continue문
+ - for, while 문에서 실행 루프 내에서 실행 순서를 무조건 제어 루프의 조건식으로 옮겨서,
+   다음 번의 반복 실행이 진행
+   
+ - 예제
+  > while 조건식 :
+    	if n<10 :
+    		continue // 반복문의 처음으로 간다
+    	if n>100 : 
+    		break // 가장 가까운 루프를 벗어난다 
+    	
+[25] 리스트
+* 리스트(List)는 데이터의 목록을 다루는 자료형
+* []대괄호로 명명 한다.
+* 리스트 안에는 어떠한 자료형도 포함 가능하다.
+* 예시 ) ls = []
+ 		ls = ["서울",100.1]
+* 리스트는 박스(변수)를 한 줄로 붙인 뒤에 박스 전체 이름(aa)을 지정
+* 각각은 aa[0], aa[1], aa[2], aa[3]과 같이 번호를 붙여서 사용
+* len(aa) : aa리스트의 전체 길이(개수)를 의미
+
+[26] 리스트 슬라이싱
+* 예시 ) ls = [10, 20, 30, 40]
+	> ls[1:3] : ls[1]~ls[2]
+	> ls[0:3] : ls[0]~ls[2]
+	> ls[2:] : ls[2]~끝까지
+	> ls[:2] : ls[0] ~ ls[1]
+	
+[27] 리스트 (얕은 복사) 
+ls = [10,20,30,40]
+arr = ls
+arr[2] = 20000
+
+> arr 출력 결과
+>>> arr
+[10, 20, 20000, 40]  
+  
+[28] 리스트 (깊은 복사)
+- 첫번째 방법
+>>> ls = [10,20,30,40]
+>>> arr = ls[:]
+>>> arr[2] = 20000
+>>> arr
+[10, 20, 20000, 40]
+
+- 두번째 방법
+>>> import copy
+>>> ls = [10,20,30,40]
+>>> arr = copy.deepcopy(ls)
+>>> arr[2] = 20000
+>>> arr
+[10, 20, 20000, 40]
+
+[29] 리스트 연산
+- 덧셈
+>>> ls = [10,20,30]
+>>> arr = [40,50,60]
+>>> str = ls + arr
+>>> str
+[10, 20, 30, 40, 50, 60]
+
+- 곱셈
+>>> str = ls * 3
+>>> str
+[10, 20, 30, 10, 20, 30, 10, 20, 30]
+
+[30] 리스트 조작 함수
+ * append() : 제일 뒤에 값 추가 ex. ls.append(값)
+ * pop() : 제일 뒤의 값을 빼고 그 값을 삭제 ex. ls.pop()
+ * sort() : 항목 오름차순 정렬 ex. ls.sort()
+ * reverse() : 항목 내림차순 정렬 ex. ls.reverse()
+ * index() : 지정한 값을 찾아서 그 위치를 반환 ex. ls.index(찾을 값)
+ * insert() : 지정된 위치에 값을 삽입한다 ex. ls.insert(위치,값)
+ * remove() : 리스트에서 지정한 값을 제거. 같은 값이 여러개일 경우 첫번째 값을 삭제 ex. ls.remove(지울 값)
+ * extend() : 리스트 뒤에 리스트 추가 ex. ls.extend(리스트 이름)
+ * count() : 리스트에서 찾을 값의 개수를 센다 ex. ls.count(찾을 값)
+ * del() : 리스트에서 해당 위치의 항목을 삭제 ex. del(ls[위치])
+ * len() : 리스트에 포함된 전체 항목의 개수를 센다 ex. len(ls)
+ 
+[31] 2차원 리스트
+ex. 
+>>> aa = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+>>> print(aa[0][0])
+1
+>>> print(aa[1][1])
+6
+>>> print(aa[2][0])
+9
+>>> print(aa[2][2])
+11
+
+[32] 튜플
+- 튜플은 리스트와 비슷하다
+ > 그렇지만 리스트는 '목록' / 튜플은 'n개의 요소로 된 집합'
+- 파이썬의 list와 tuple의 차이
+ (1) List는 데이터 변경 가능(리스트 생성 후 추가/삭제/수정 가능)
+ (2) tuple은 데이터 변경 불가능(튜플 생성 후 추가/삭제/수정 불가능)
+ (3) List는 이름 그대로 목록 형식의 데이터를 다루는데 적합
+ (4) tuple은 위경도 좌표나 rgb색상처럼 작은 규모의 자료구조를 구성하기에 적합
+ 
+* 튜플의 생성
+ > 리스트는 대괄호[]로 생성하고, 튜플은 괄호()로 생성
+ > 하나의 값을 저장 할 때는 ,(콤마)를 붙여줘야 한다
+ > 괄호 생략이 가능하다
+ 
+ ex.
+ >>> tp = (10,20,30)
+ >>> print(tp)
+ (10, 20, 30)
+ >>> print(len(tp))
+ 3
+ >>> print(type(tp))
+ <class 'tuple'>
+ >>> tp[1] = 100 //에러 발생 : 튜플은 수정 불가능
+Traceback (most recent call last):
+  File "<pyshell#45>", line 1, in <module>
+    tp[1] = 100
+TypeError: 'tuple' object does not support item assignment
+
+ >>> print(tp[1])
+ 20
+ >>> print(tp[2])
+ 30
+ >>> print(tp[0])
+ 10
+ 
+ * 하나의 항목만 가진 튜플
+ >>> tp3 = (10,) // tp3 = 10이라고 하면 int타입으로 인식
+ >>> print(type(tp3))
+ <class 'tuple'>
+
+ * 튜플 연산과 슬라이싱 방식 모두 리스트와 동일하다
+ 
+[33] 튜플의 packing & unpacking
+>>> pack = 1,2,"패킹"
+>>> print(pack)
+(1, 2, '패킹')
+>>> a,b,c = pack
+>>> print(a,b,c)
+1 2 패킹
+
+[34] 튜플의 함수
+ * index() : 튜플 내 값의 위치를 알려줌 ex.tp.index(값)
+ * count() : 일치하는 값의 개수를 알려줌 ex.tp.count(값)
+ 
+ ex.
+ >>> print(tuple.index(200))
+ 1
+ >>> print(tuple.index("함수"))
+ 2
+ >>> print(tuple.count(100))
+ 1
+ 
+ [35] 딕셔너리[사전]
+ - 리스트와 비슷, 리스트처럼 첨자를 이용해서 요소에 접근
+ - 딕셔너리의 첨자는 키(key)
+ - 이 첨자, 키가 가리키는 곳에 저장되는 데이터를 값(value)
+ - 탐색 속도가 빠르고, 사용하기도 편리
+ - 특정 슬롯에 새로운 키-값을 입력하거나 딕셔너리 안에 있는 요소를 참조할 때는
+    리스트와 튜플에서처럼 대괄호 []를 이용 
+    
+ [36] 딕셔너리 생성
+ - 중괄호 {}로 묶여 있으며 키(key)와 값(value)의 쌍으로 이루어짐
+ - 딕셔너리 변수 = {키1:값1,키2:값2,키3:값3...}
+ 
+ ex. 
+ >>> student = {'학번':1234,'이름':'홍길동','학과':'it학과'}
+ >>> print(student)
+ {'학번': 1234, '이름': '홍길동', '학과': 'it학과'}
+ 
+ ex.
+ >>> impo = {}
+ >>> name = '노채은'
+ >>> val = 20
+ >>> impo[name] = val
+ >>> 
+ >>> print(impo[name])
+ 20
+ 
+ [37] 딕셔너리 함수
+ * keys() : key list ex) dic.keys()
+ * values() : value list ex) dic.values()
+ * items() : key,value 리스트 ex) dic.items()
+ * Clear() : 항목 모두 삭제 ex) dic.clear()
+ * Get() : 키가 없으면 none / 키가 있으면 value 출력 ex) dic.get(키)
+ * Setdefault() : key가 없으면 추가 설정 ex) dic.setdefault(키,값)
+ * Updata() : 다른 사전의 내용으로 갱신 ex) dic.updata(obj)
+ * Popitem() : (key,value)를 리턴하고 항목 제거 ex) dic.popitem()
+ * Fromkeys() : (key,value)리스트나 튜플로 설정 ex) dic=dic.fromkeys(키) or (키,값)
+ * Pop() : Key를 이용해서 해당하는 값을 지움 ex) dic.pop(key)
+ 
+ ex.
+ >>> num = {1:"일",2:'이',3:'삼',4:"사"}
+ >>> print(num.keys())
+ dict_keys([1, 2, 3, 4])
+ >>> print(num.values())
+ dict_values(['일', '이', '삼', '사'])
+ >>> print(list(num.keys()))
+ [1, 2, 3, 4]
+ >>> print(list(num))
+ [1, 2, 3, 4]
+ >>> print(list(num.values()))
+ ['일', '이', '삼', '사']
+ 
+ [38] 문자열
+ 
+ ex.
+ >>> str = 'Have a nice day'
+ >>> print(str[0:4])
+ Have
+ >>> arr = str[0:4]
+ >>> print(arr)
+ Have
+ >>> str += 'good'
+ >>> print(str)
+ Have a nice daygood
+ 
+ [39] 문자열 함수
+ 
+ (1) 대문자/소문자의 변환
+ * upper() : 소문자를 대문자로 변경 ex) str.upper()
+ * lower() : 대문자를 소문자로 변경  ex) str.lower()
+ * swapcase() : 대소문자를 상호 변경 ex) str.swapcase()
+ * title() : 각 단어의 제일 앞 글자만 대문자로 변경 ex) str.title()
+ 
+ (2) 문자열 찾기
+ * count() : 찾을 문자열의 개수 ex) str.count('문자열')
+ * find() : 찾을 문자열의 위치 ex) str.find('문자열')
+ * index() : find()함수와 동일한 용도로 사용 / 그러나 찾는 값이 없으면 error  ex) str.index('문자열')
+ * startswith() : 문자열로 시작하면 True, 아니면 False 
+ * endwith() : 문자열로 끝나면 True
+ 
+ ex.
+ >>> str = 'Have a nice day'
+ >>> print(str.count('a'))
+ 3
+ >>> print(str.index('a'))
+ 1
+ >>> print(str.find('k'))
+ -1
+ >>> print(str.index('l'))
+ Traceback (most recent call last):
+  File "<pyshell#43>", line 1, in <module>
+    print(str.index('l'))
+ ValueError: substring not found
+ >>> print(str.startswith('H'))
+ True
+ >>> print(str.endswith('a'))
+ False
+
+ (3) 문자열 변경
+ * strip() : 문자열 양 끝 문자 제거  ex) str.strip() or str.strip('문자')
+ * rstrip() : 문자열 끝 문자 제거  ex) str.rstrip() or str.rstrip('문자')
+ * lstrip() : 문자열 처음 문자 제거 ex) str.lstrip() or str.lstrip('문자')
+ * replace() : 기존 문자열 새 문자열로 치환 ex) str.replace('기존 문자열','바꿀 문자열')
+ * split() : 문자 열을 공백이나 다른 문자로 분리래서 리스트를 반환 ex) str.split() or str.split('문자')
+ * splitlines() : 행단위로 분리  ex) str.splitlines()
+ * join() : 기존의 문자열과 새 문자열 합해줌 ex) str.join(문자열)
+ 
+ (4) 문자열 정렬
+ * center() : 숫자만큼 전체 자릿수를 잡은 후 문자 열을 가운데 배치  ex) str.center(정수) or str.center(정수,'값')
+ * ljust() : 왼쪽에 붙여 출력 ex) str.ljust(정수)
+ * rjust() : 오른쪽에 붙여 출력 ex) str.rjust(정수)
+ * zfill() : 오른쪽으로 붙여 쓰고 왼쪽 빈 공간은 0으로 채움 ex) str.zfill(정수)
+ 
+ ex.
+ >>> print(str.center(20,'-'))
+ --Have a nice day---
+ 
+ 
+ (5) 문자열 구성 파악
+ - True 또는 False로 반환
+ 
+ * isdigit() : 전체가 숫자로만 되어 있는가? ex) str.isdigit()
+ * isalpha() : 전체가 글자(한글/영어)로 되어 있는가? ex) str.isalpha()
+ * isalnum() : 전체가 글자와 숫자가 섞여 있는가 ex) str.isalnum()
+ * islower() : 전체가 소문자로 되어 있는가 ex) str.islower()
+ * isupper() : 전체가 대문자로 되어 있는가 ex) str.isupper()
+ * isspace() : 전체가 공백 문자로 되어 있는가 ex) str.isspace()
+ 
+ 
+ [40] 함수
+ - 파이썬에서는 함수나 메소드를 정의할 때 definition을 줄인 키워드인 def를 사용
+ - 형식
+  def 함수이름():
+  	종속문장
+ 
+ [41] 변수(스코핑 룰)
+  * 지역변수와 전역변수
+  - 지역변수는 한정된 지역(Local)에서만 사용되는 변수,
+   	전역 변수는 프로그램 전체(Global)에서 사용되는 변수
+ 
+  (1) 지역변수
+  - ex.
+  def func1():
+  	a = 100
+  	print("func1 : ",a)
+  def func2():
+  	a = 200
+  	print("func2 : ",a)
+  func1()
+  func2()
+  
+  (2) 전역변수
+  - ex.
+  def func1():
+  	print("func1 : ",a)
+  def func2() :
+  	print("func2 : ",a)
+  	
+  a = 200 # 전역변수
+  
+  func1()
+  func2()
+  
+  ----- 출력 결과 -----
+  >>> 
+ ================= RESTART: C:/Users/user/Desktop/day0327.py =================
+ func1 :  1222
+ func2 :  1222
+ 
+ (3) Default Parameter
+ 	def sum_func(x1,x2,x3 = 100):
+ 		result = 0
+ 		result = x1+x2+x3
+ 		return result
+ 	
+ 	def display():
+ 		sum = 0
+ 		a,b,c = 10,20,30
+ 		Sum = sum_func(a,b)
+ 		print("매개변수 2개 호출 : ",Sum)
+ 		Sum = sum_func(a,b,c)
+ 		print("매개변수 3개 호출 : ",Sum)
+ 	display() 
+  
+  ----- 출력 결과 -----
+  >>> 
+ ================= RESTART: C:/Users/user/Desktop/day0327.py =================
+ 매개변수 2개 호출 :  130 
+ 매개변수 3개 호출 :  60
+
+
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
